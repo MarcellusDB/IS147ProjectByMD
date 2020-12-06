@@ -10,21 +10,21 @@ public class List extends foods{
 
      public static void printMenu(){
          foods Obj1 = new foods();
-        String[] List = {"Pizza", "Cheeseburger", "Grilled Cheese", "Fries", "Ice Cream"};
-        for(int x = 0;x<List.length; x = Math.addExact(x, 1)){
+System.out.println("-----------------Menu-----------------");
+        for(int x = 0;x<Obj1.getListOrRD("list").length; x = Math.addExact(x, 1)){
             int foodNum = x+1;
-            System.out.println(foodNum+". "+List[x]+" $"+Obj1.getPrice(x));
+            System.out.println(foodNum+". "+Obj1.getListOrRD("list")[x]+" $"+Obj1.getPrice(x));
         }
          //display RD as last item on menu (number = List.length++)
-        String RandomDelight;
+        System.out.println((Obj1.getListOrRD("list").length+1)+". Random Delight $7.99");
     }
-    public double PrintRD(){
+    public void printRD(){
         // if user selects RD run this
         // randomly chose a number within index length whichever it lands on is the one the customer gets
         // then run number in getPrice
         Random rand = new Random();
-        int RandomDelight = rand.nextInt((List.length) + 1);
-        double RDPrice = getPrice(RandomDelight);
-        return RDPrice;
+        int RandomDelight = rand.nextInt((getListOrRD("list").length) + 0);
+       System.out.println("You got the "+getListOrRD("list")[RandomDelight]+" for $"+ getListOrRD(3));
+       System.out.println("Please confirm your order (Yes/No)");
     }
 }

@@ -9,11 +9,11 @@ public class foods {
     private final double RandomDelight = 7.99;
 //either make it^ select a random item from menu and offer at this price or turn it to chief's choice
     // and give it whatever price of the food it lands on.
+    private String[] List = {"Pizza", "Cheeseburger", "Grilled Cheese", "Fries", "Ice Cream"};
 
     public foods(){
     }
 
-    String[] List = {"Pizza", "Cheeseburger", "Grilled Cheese", "Fries", "Ice Cream"};
     //use switch statement here to make a getter for each food item
     public double getPrice(int food){
         double price=78969597;
@@ -45,5 +45,10 @@ public class foods {
         return price;
     }
 
-
+    public double getListOrRD(int num){
+        return RandomDelight;
+    }
+    public String[] getListOrRD(String list){
+        return List;
+    }
 }
