@@ -17,6 +17,7 @@ public class Ordering {
             do {
                 System.out.println("Please type the number of the item you would like");
                 int order = sc.nextInt();
+
                     if(order<=Obj2.getListOrRD("list").length) {
                     OrderingNorm(order);
                  }
